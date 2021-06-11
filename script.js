@@ -117,13 +117,22 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() { 
 
-if (keys[65]) {
-if velX < -speed)
-
+if (keyIsDown(65)) { spelerX = spelerX - 5;
 }
+if (keyIsDown(68)) { spelerX = spelerX+ 5;
+}
+if (spelerX<50) {spelerX=50;}
 
-
+if (spelerX>1230) {spelerX=1230;}
 };
+
+
+
+
+
+
+
+
 
 
 /**
@@ -143,8 +152,15 @@ var checkVijandGeraakt = function() {
  */
 var checkSpelerGeraakt = function() {
     
+  if (player.x+(player.width/2) >= box.x) {console.log("collision!");}
+  
+  
+  
+  
   return false;
-};
+}
+
+;
 
 
 /**
