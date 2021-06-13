@@ -34,6 +34,10 @@ var vijandY = 0;   // y-positie van vijand
 var score = 0; // aantal behaalde punten
 
 
+var KEY_LEFT = 37;
+var KEY_UP = 38;
+var KEY_RIGHT = 39;
+var KEY_DOWN = 40;
 
 
 
@@ -100,35 +104,17 @@ circle(x+6090, y+290, 50, 150);
 circle(x+6650 , y+410, 50, 150);
 circle(x+6760, y+530, 50, 150);
 circle(x+7040 , y+550, 50, 150);
-circle(x+, y+650, 50, 150);
-circle(x+1000 , y+50, 50, 150);
-circle(x+400 , y+170, 50, 150);
-circle(x+400 , y+290, 50, 150);
-circle(x+300 , y+410, 50, 150);
-circle(x+300 , y+530, 50, 150);
-circle(x+1600 , y+550, 50, 150);
-circle(x+500 , y+650, 50, 150);
-circle(x+1000 , y+50, 50, 150);
-circle(x+400 , y+170, 50, 150);
-circle(x+400 , y+290, 50, 150);
-circle(x+300 , y+410, 50, 150);
-circle(x+300 , y+530, 50, 150);
-circle(x+1600 , y+550, 50, 150);
-circle(x+500 , y+650, 50, 150);
-circle(x+1000 , y+50, 50, 150);
-circle(x+400 , y+170, 50, 150);
-circle(x+400 , y+290, 50, 150);
-circle(x+300 , y+410, 50, 150);
-circle(x+300 , y+530, 50, 150);
-circle(x+1600 , y+550, 50, 150);
-circle(x+500 , y+650, 50, 150);
-circle(x+1000 , y+50, 50, 150);
-circle(x+400 , y+170, 50, 150);
-circle(x+400 , y+290, 50, 150);
-circle(x+300 , y+410, 50, 150);
-circle(x+300 , y+530, 50, 150);
-circle(x+1600 , y+550, 50, 150);
-circle(x+500 , y+650, 50, 150);
+circle(x+6780, y+650, 50, 150);
+circle(x+6860 , y+50, 50, 150);
+circle(x+6910 , y+170, 50, 150);
+circle(x+8000 , y+290, 50, 150);
+circle(x+8000 , y+410, 50, 150);
+circle(x+8000 , y+530, 50, 150);
+circle(x+8000 , y+550, 50, 150);
+circle(x+8000 , y+650, 50, 150);
+circle(x+8000 , y+50, 50, 150);
+circle(x+8000 , y+170, 50, 150);
+circle(x+8000 , y+290, 50, 150);
 
 
 
@@ -245,18 +231,24 @@ var beweegKogel = function() {
 
 var beweegSpeler = function() { 
 
-if (keyIsDown(65)) { spelerX = spelerX - 5;
+if (keyIsDown(KEY_UP)) { spelerY = spelerY - 5;
 }
-if (keyIsDown(68)) { spelerX = spelerX+ 5;
+if (keyIsDown(KEY_LEFT)) { spelerX = spelerX- 5;
 }
+if (keyIsDown(KEY_RIGHT)) { spelerX = spelerX+ 5;
+}
+if (keyIsDown(KEY_DOWN)) { spelerY = spelerY+ 5;
+}
+
+
+
 
 if (spelerX<50) {spelerX=50;}
 
 if (spelerX>1230) {spelerX=1230;}
 
 
-if (keyIsDown(32)) {spelerY = spelerY + 20;
-}
+
 
 
 
@@ -298,7 +290,7 @@ var checkVijandGeraakt = function() {
  */
 var checkSpelerGeraakt = function() {
     
-  if {spelerX = vijandX} 
+ 
   
   
   
@@ -315,12 +307,15 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
       
-if {spelerX = vijandX} {}
 
 
 
 
-  return false;
+
+
+
+
+
 };
 
 
@@ -367,7 +362,12 @@ function draw() {
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
+      
+      
       }
       break;
+  case GAMEOVER:
+      text(100, 100, "GameOver")
+  
   }
 }
