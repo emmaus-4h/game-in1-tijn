@@ -1,4 +1,4 @@
-/// @ts-check
+ /// @ts-check
 /// <reference path=".gitpod/p5.global-mode.d.ts" />
 "use strict";
 
@@ -59,10 +59,124 @@ var tekenVeld = function () {
 var tekenVijand = function(x, y) {
     
 fill("red")
-rect(x+300 , y+527, 50, 150);
+circle(x+1000 , y+50, 50, 150);
+circle(x+1300 , y+170, 50, 150);
+circle(x+1400 , y+290, 50, 150);
+circle(x+1400 , y+410, 50, 150);
+circle(x+1750 , y+530, 50, 150);
+circle(x+1600 , y+550, 50, 150);
+circle(x+2000 , y+650, 50, 150);
+circle(x+2400 , y+50, 50, 150);
+circle(x+2100 , y+170, 50, 150);
+circle(x+2250 , y+290, 50, 150);
+circle(x+2500 , y+410, 50, 150);
+circle(x+2650 , y+530, 50, 150);
+circle(x+2870 , y+550, 50, 150);
+circle(x+2990, y+650, 50, 150);
+circle(x+3100 , y+50, 50, 150);
+circle(x+3500, y+170, 50, 150);
+circle(x+3200, y+290, 50, 150);
+circle(x+3400, y+410, 50, 150);
+circle(x+3700, y+530, 50, 150);
+circle(x+4000 , y+550, 50, 150);
+circle(x+3900, y+650, 50, 150);
+circle(x+4600 , y+50, 50, 150);
+circle(x+4250 , y+170, 50, 150);
+circle(x+44500 , y+290, 50, 150);
+circle(x+4450 , y+410, 50, 150);
+circle(x+4790, y+530, 50, 150);
+circle(x+4950 , y+550, 50, 150);
+circle(x+5300 , y+650, 50, 150);
+circle(x+5500 , y+50, 50, 150);
+circle(x+5170, y+170, 50, 150);
+circle(x+5600, y+290, 50, 150);
+circle(x+5750 , y+410, 50, 150);
+circle(x+6050 , y+530, 50, 150);
+circle(x+6500 , y+550, 50, 150);
+circle(x+6140 , y+650, 50, 150);
+circle(x+6400 , y+50, 50, 150);
+circle(x+6310 , y+170, 50, 150);
+circle(x+6090, y+290, 50, 150);
+circle(x+6650 , y+410, 50, 150);
+circle(x+6760, y+530, 50, 150);
+circle(x+7040 , y+550, 50, 150);
+circle(x+, y+650, 50, 150);
+circle(x+1000 , y+50, 50, 150);
+circle(x+400 , y+170, 50, 150);
+circle(x+400 , y+290, 50, 150);
+circle(x+300 , y+410, 50, 150);
+circle(x+300 , y+530, 50, 150);
+circle(x+1600 , y+550, 50, 150);
+circle(x+500 , y+650, 50, 150);
+circle(x+1000 , y+50, 50, 150);
+circle(x+400 , y+170, 50, 150);
+circle(x+400 , y+290, 50, 150);
+circle(x+300 , y+410, 50, 150);
+circle(x+300 , y+530, 50, 150);
+circle(x+1600 , y+550, 50, 150);
+circle(x+500 , y+650, 50, 150);
+circle(x+1000 , y+50, 50, 150);
+circle(x+400 , y+170, 50, 150);
+circle(x+400 , y+290, 50, 150);
+circle(x+300 , y+410, 50, 150);
+circle(x+300 , y+530, 50, 150);
+circle(x+1600 , y+550, 50, 150);
+circle(x+500 , y+650, 50, 150);
+circle(x+1000 , y+50, 50, 150);
+circle(x+400 , y+170, 50, 150);
+circle(x+400 , y+290, 50, 150);
+circle(x+300 , y+410, 50, 150);
+circle(x+300 , y+530, 50, 150);
+circle(x+1600 , y+550, 50, 150);
+circle(x+500 , y+650, 50, 150);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 };
+
+
+
+
 
 
 /**
@@ -82,13 +196,16 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-  //hoofd
-  fill("white");
-  ellipse(x, y+400, 50, 50);
+  
+ 
   
   //lijf
   fill("white");
-  ellipse(x, y+500, 50, 150);
+  ellipse(x+200, y+300, 100, 30);
+
+  
+
+ 
 
 
 
@@ -98,9 +215,17 @@ var tekenSpeler = function(x, y) {
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
+
+
 var beweegVijand = function() {
-    
-};
+  vijandX = vijandX - 15
+
+}; 
+
+
+
+
+
 
 
 /**
@@ -115,16 +240,37 @@ var beweegKogel = function() {
  * Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele spelerX en spelerY
  */
+
+
+
 var beweegSpeler = function() { 
 
 if (keyIsDown(65)) { spelerX = spelerX - 5;
 }
 if (keyIsDown(68)) { spelerX = spelerX+ 5;
 }
+
 if (spelerX<50) {spelerX=50;}
 
 if (spelerX>1230) {spelerX=1230;}
+
+
+if (keyIsDown(32)) {spelerY = spelerY + 20;
+}
+
+
+
+
+
+
+
+
 };
+
+
+
+
+
 
 
 
@@ -152,7 +298,7 @@ var checkVijandGeraakt = function() {
  */
 var checkSpelerGeraakt = function() {
     
-  if (player.x+(player.width/2) >= box.x) {console.log("collision!");}
+  if {spelerX = vijandX} 
   
   
   
@@ -168,7 +314,12 @@ var checkSpelerGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
-    
+      
+if {spelerX = vijandX} {}
+
+
+
+
   return false;
 };
 
@@ -180,7 +331,7 @@ var checkGameOver = function() {
  */
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
-  createCanvas(1280, 720);
+  createCanvas(1220, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('green');
